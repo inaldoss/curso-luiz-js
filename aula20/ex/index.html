@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício IMC</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <section class="secao">
+        <h1>Tabela IMC</h1>
+        <span class="esquerda">
+            <h3 class="esq">IMC</h3>
+            <p>Menos do que 18,5</p><br>
+            <p>Entre 18,5 e 24,9</p><br>
+            <p>Entre 25 e 29,9</p><br>
+            <p>Entre 30 e 34,9</p><br>
+            <p>Entre 35 e 39,9</p><br>
+            <p>Mais do que 40</p>
+        </span>
+            
+        <span class="direita">
+            <h3 class="dir">Resultado</h3>
+            <p>Abaixo do peso</p><br>
+            <p>Peso normal</p><br>
+            <p>Sobrepeso</p><br>
+            <p>Obesidade grau 1</p><br>
+            <p>Obesidade grau 2</p><br>
+            <p>Obesidade grau 3</p>
+        </span>
+
+        <h1>Calcule seu IMC</h1>
+        <form action="" method="POST" id="form">
+            <label for="">Peso:</label>
+            <input type="text" id="peso">
+            <label for="">Altura:</label>
+            <input type="text" id="altura">
+            <button id="calcular" >Calcular</button>
+            
+        </form>
+        <div id="resultado"></div>
+        
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

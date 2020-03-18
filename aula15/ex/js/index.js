@@ -1,0 +1,15 @@
+const num = Number (prompt('Digite um número:'))
+const h1 = document.getElementById('numero-titulo')
+h1.innerText = num
+const div1 = document.getElementById('texto')
+div1.innerText = `A raiz quadrada de ${num} é ${num ** 0.5}`
+const div2 = document.getElementById('texto2')
+div2.innerText = `${num} é inteiro? ${Number.isInteger(num)}`
+const div3 = document.getElementById('texto3')
+div3.innerText = `É NaN? ${Number.isNaN(num)}`
+const div4 = document.getElementById('texto4')
+div4.innerText = `Arredondamento para baixo: ${Math.floor(num)}`
+const div5 = document.getElementById('texto5')
+div5.innerText = `Arredondamento para cima: ${Math.ceil(num)}`
+const div6 = document.getElementById('texto6')
+div6.innerText = `Arredondamento com duas casas: ${num.toFixed(2)}`
