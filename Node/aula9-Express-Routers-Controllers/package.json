@@ -1,7 +1,7 @@
 {
   "name": "aula9",
   "version": "1.0.0",
-  "description": "",
+  "description": "> Get [XDG Base Directory](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html) paths",
   "main": "routes.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
