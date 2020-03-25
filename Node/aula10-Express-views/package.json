@@ -1,8 +1,8 @@
 {
-  "name": "aula10",
+  "name": "aula9",
   "version": "1.0.0",
-  "description": "",
-  "main": "routes.js",
+  "description": "> Get [XDG Base Directory](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html) paths",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js"
