@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const routes = require('./routes');
 const path = require('path');
+const meuMiddleware = require('./src/middlewares/middleware');
 
 // Trata o body das requisições
 app.use(express.urlencoded({ extended: true }));
@@ -12,6 +13,8 @@ app.set('views', path.resolve(__dirname, 'src', 'views'));// Está setando o cam
 //app.set('views', './src/views');
 app.set('view engine', 'ejs');
 
+
+app.use(meuMiddleware);
 // Utilizando as rotas do arquivo routes.js
 app.use(routes);
 
