@@ -10,6 +10,10 @@ mongoose.connect(process.env.CONNECTIONSTRING, { useNewUrlParser: true, useUnifi
     })
     .catch(e => console(e + 'Deu erro!!!!'));
 
+const session = require('express-session');
+const MongoStore = require('connect-mongo')(session);
+const flash = require('connect-flash');
+
 const routes = require('./routes');
 const path = require('path');
 const meuMiddleware = require('./src/middlewares/middleware');
@@ -18,6 +22,19 @@ const meuMiddleware = require('./src/middlewares/middleware');
 app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static(path.resolve(__dirname, 'public')));
+
+const sessionOptions = session({
+    secret: 'hfshfkhkfhhdfhdifheifhef1f545f12f2df4',
+    store: new MongoStore({ mongooseConnection: mongoose.connection }),
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+        maxAge: 1000 * 60 * 60 * 24 * 7,
+        httpOnly: true
+    }
+});
+app.use(sessionOptions);
+app.use(flash());
 
 app.set('views', path.resolve(__dirname, 'src', 'views'));// Está setando o caminho das views, a linha 10 é a mesma funcionalidade, apenas foi escrito de forma mais simples.
 //app.set('views', './src/views');
