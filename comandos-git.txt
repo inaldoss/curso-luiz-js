@@ -1,0 +1,28 @@
+git status
+git log
+git diff -> Verificar as alterações realizadas, mas o arquivo deve ter sido comitado ao menos um vez
+git checkout "nome do arquivo" -> Desfazer a última edição antes do commit
+git checkout -b "nome do branch que deseja criar" -> Criar novo branch
+git branch -> Mostra os ramos do branch existente
+git checkout "nome do branch" -> Para entrar no branch
+git checkout -D "nome do branch" -> Apagar um branch
+git show "hash do commit" -> Mostra detalhes do commit
+pwd -> Para descobrir em qual diretório estamos
+touch "nome do arquivo" -> Para criar um arquivo (touch teste.txt)
+cat "nome do arquivo" -> Visualizar o conteúdo do arquivo sem ter que editar ( cat teste.txt)
+mv "nome do arquivo" "nome do novo arquivo" -> Renomear arquivo (mv teste.txt teste2.txt)
+rm -rf "nome do diretório ou do arquivo" -> Remover diretório ou arquivo (git rm teste.txt) e depois comitar
+--------Restaurar arquivo----------
+1 - git log --diff-filter=D --sumary
+2 - pegar o hash do arquivo que deseja Restaurar
+3 - git checkout + nome do arquivo (git checkout teste.txt)
+4 - git add .
+5 - git commit
+---------Reverter commit------------
+git revert hash do commit desejado
+git revert --abort -> Cancelar uma operação git revert com erros
+SEMPRE executar git add e git commit anyes de tentar reverter um commito
+---------Desfazer mudanças----------
+git reset --soft
+git reset --mixed (modo padrão)
+git reset --hard
